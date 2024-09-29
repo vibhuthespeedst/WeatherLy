@@ -1,3 +1,11 @@
+@import 'normalize.css';
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;  
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +13,258 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 15px; /* Adjust as needed */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+p{
+  font-size: 1.6 rem;
+}
+
+h1{
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-animation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 9999;
+}
+
+.loadingtext {
+  margin-top: 1rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #000;
+}
+
+
+.app {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  background-image: url('./Background-image/wendy-bandurski-miller-_pSwppzjEEw-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  animation: slideshow 50s infinite;
+}
+
+.time {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #f8f8f8;
+  margin-top: 0.5rem;
+}
+
+.app .weather-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.app .weather-icon img {
+  width: 70px; 
+  height: 70px;
+  background-color: #898787;
+  margin-top: 25%;
+  border-radius: 25px;
+}
+
+.app::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  animation: slideshow 50s infinite;
+  background-size: cover;
+  background-position: center;
+}
+
+.app .search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding-top: 10px;
+}
+
+.app .search-input-container {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  padding: 0.7rem 1rem;
+}
+
+.app .search-button {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.2rem;
+  color: #f8f8f8;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.app .search-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.app input {
+  padding: 0.7rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  border: 1px solid rgba(255,255,255,0.8);
+  background: rgba(255, 255,255,0.1);
+  color:#f8f8f8;
+  margin-right: 10px;
+  background: none;
+  border: none;
+  outline: none;
+  color:#f8f8f8;
+}
+
+::placeholder{
+  color: #f8f8f8;
+}
+
+.container{
+  max-width: 700px;
+  height: 700px;
+  margin: auto;
+  pad: 0 1rem;
+  position: relative;
+  top: 10%;
+  bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.app .top {
+  width: 100%;
+  margin: 4rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app .description{
+  position: relative;
+  right: -25%;
+  bottom: 18%;
+  transform-origin: 0 0;
+  transform: rotate(270deg);
+  margin-top: 1rem;
+}
+
+.app .bottom {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bold{
+  font-weight:700;
+}
+
+.location {
+  font-weight: 500;
+  font-size: 1.5rem;
+
+}
+
+@keyframes slideshow {
+  0%, 100% {
+    background-image: url('./Background-image/wendy-bandurski-miller-_pSwppzjEEw-unsplash.jpg');
+  }
+  16.666% {
+    background-image: url('./Background-image/clouds-and-sun-1382791.jpg');
+  }
+  33.333% {
+    background-image: url('./Background-image/dave-lsoogGC_5dg-unsplash.jpg');
+  }
+  50% {
+    background-image: url('./Background-image/kenrick-mills-1h2Pg97SXfA-unsplash.jpg');
+  }
+  66.666% {
+    background-image: url('./Background-image/oc-gonzalez-A-11N8ItHZo-unsplash.jpg');
+  }
+  83.333% {
+    background-image: url('./Background-image/quino-al-mBQIfKlvowM-unsplash.jpg');
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  p {
+    font-size: 1.4rem;
+  }
+  /* Adjust other text-based styles as needed */
+}
+
+/* Adjust layout for smaller screens */
+@media screen and (max-width: 480px) {
+  .app .top {
+    margin: 2rem auto;
+  }
+  .app .description{
+    /* padding-left: rem; */
+    margin-left: 4rem;
+    margin-top: 1rem;
+    /* padding-top: 30rem; */
+  }
+  .app .bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  .app .weather-icon img {
+    width: 50px;
+    height: 50px;
+    /* Adjust other styles for weather icon if needed */
+  }
+  .app input,
+  .app .search-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    /* Adjust other input/button styles as needed */
+  }
+  /* Adjust other styles specific to smaller screens */
 }
